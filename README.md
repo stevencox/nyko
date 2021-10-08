@@ -1,54 +1,18 @@
 # nyko
 
-### GNS3 Server in VMWare Fusion on OSX
-![image](https://user-images.githubusercontent.com/306971/136234919-9cee597a-06d7-41d4-9e69-9143fe54431f.png)
-
-### GNS3 User Interface
-![image](https://user-images.githubusercontent.com/306971/136235044-3313a515-9e1e-440a-a6a8-ac961943bcf5.png)
-
-### GNS3 Desktop Interface
-![image](https://user-images.githubusercontent.com/306971/136235190-680af203-9beb-4469-85cb-b9f122435cf7.png)
-
-### GNS3 Web Interface
-![image](https://user-images.githubusercontent.com/306971/136235895-0def3be8-6320-453e-90bb-3c2a755ac366.png)
-
-### ExaBGP Simulator with Dynamic Routes 
-![image](https://user-images.githubusercontent.com/306971/136235512-f3c4e14d-839f-4ad5-8bad-e0263577ac7c.png)
-
-# Faucet
-
-### VMWare Fusion
-
-The Fusion VM [binary](https://github.com/faucetsdn/faucet/releases) is a qcow2 but VMWare fusion wants a vmdk. I used [qemu](https://www.virtualdennis.com/how-to-convert-qcow2-to-vmdk-for-vmware-using-macos/) to convert it.
-```
-qemu-img convert -f qcow2 -O vmdk ~/Downloads/faucet-amd64-1.9.55.qcow2 ~/Downloads/faucet-amd64-1.9.55.vmdk
-```
-Create a new VM, select Ubuntu as the OS and UEFI as the boot type, and start the VM.
-
-My network adapter is set like this
-![image](https://user-images.githubusercontent.com/306971/136431019-06755730-85ff-4c09-829f-dda4e541ff6e.png)
-
-Find the VM's IP address.
-
-![image](https://user-images.githubusercontent.com/306971/136431587-14e81d71-49ef-4ea7-a203-572240dfc3ad.png)
-
-Login to Grafana
-![image](https://user-images.githubusercontent.com/306971/136431438-12cc57b9-cb78-4d45-b6e9-3e6fdef1f1dd.png)
-
-The Faucet configuration instructions say http://localhost:9090 for the Prometheus data source address. I guess my networking's wonky but I used http://172.16.182.3:9090/ (the VM's address) and that works.
-
-
-
 Start Faucet
-![image](https://user-images.githubusercontent.com/306971/136615026-0cbd5140-3361-4ec5-a968-574e0cdb0f6c.png)
+![image](https://user-images.githubusercontent.com/306971/136625102-55f49714-c051-4c5a-a3ab-f97fb2bb4a82.png)
+![image](https://user-images.githubusercontent.com/306971/136624895-cf251297-450a-4e16-a1e9-173872b09899.png)
 
-![image](https://user-images.githubusercontent.com/306971/136615230-37e96108-d499-4e41-81fe-4d6fdb7fa702.png)
+Faucet reads configs and initializes with values from the default config.
+![image](https://user-images.githubusercontent.com/306971/136625177-34e3b09f-276e-4809-97d0-640919acc724.png)
 
+Ru Nyko on the sample program:
+![image](https://user-images.githubusercontent.com/306971/136625323-ba032bb9-411a-4952-93f3-52dc8abd779f.png)
 
+With log level set to debug, we get:
+![image](https://user-images.githubusercontent.com/306971/136625447-c5f4ce0a-5f4c-459e-987f-36d57a403906.png)
 
-Restarting Faucet reloads the config:
-![image](https://user-images.githubusercontent.com/306971/136616930-ae85ac3f-c0c9-4ea4-a442-e2de602c3b40.png)
-
-TODO: Figure out why FAUCET_CONFIG_STAT_RELOAD=1 is not working. 
-
+And Faucet reloads:
+![image](https://user-images.githubusercontent.com/306971/136625607-983c989e-dbb2-4f03-aa3d-2acdd1dfddbd.png)
 
