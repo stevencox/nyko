@@ -49,6 +49,6 @@ Start Faucet
 Restarting Faucet reloads the config:
 ![image](https://user-images.githubusercontent.com/306971/136616930-ae85ac3f-c0c9-4ea4-a442-e2de602c3b40.png)
 
-TODO: Debug why 
+TODO: Figure out why FAUCET_CONFIG_STAT_RELOAD=1 is not working. 
 
 
