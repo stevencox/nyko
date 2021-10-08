@@ -38,3 +38,17 @@ Login to Grafana
 The Faucet configuration instructions say http://localhost:9090 for the Prometheus data source address. I guess my networking's wonky but I used http://172.16.182.3:9090/ (the VM's address) and that works.
 
 
+
+Start Faucet
+![image](https://user-images.githubusercontent.com/306971/136615026-0cbd5140-3361-4ec5-a968-574e0cdb0f6c.png)
+
+![image](https://user-images.githubusercontent.com/306971/136615230-37e96108-d499-4e41-81fe-4d6fdb7fa702.png)
+
+
+
+Restarting Faucet reloads the config:
+![image](https://user-images.githubusercontent.com/306971/136616930-ae85ac3f-c0c9-4ea4-a442-e2de602c3b40.png)
+
+TODO: Debug why 
+
+
