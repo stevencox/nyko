@@ -1,4 +1,4 @@
-# spout
+# nyko
 
 ### GNS3 Server in VMWare Fusion on OSX
 ![image](https://user-images.githubusercontent.com/306971/136234919-9cee597a-06d7-41d4-9e69-9143fe54431f.png)
