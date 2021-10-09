@@ -1,3 +1,9 @@
+I went on a journey to get a sense of what's going on with software defined networking.
+
+## GNS3
+
+Simulates networks using Dynamips. Has desktop and web based UIs that connect to a server which can plugin networking hardware ISOs.
+
 ### GNS3 Server in VMWare Fusion on OSX
 ![image](https://user-images.githubusercontent.com/306971/136234919-9cee597a-06d7-41d4-9e69-9143fe54431f.png)
 
@@ -14,6 +20,8 @@
 ![image](https://user-images.githubusercontent.com/306971/136235512-f3c4e14d-839f-4ad5-8bad-e0263577ac7c.png)
 
 # Faucet
+
+[Sounds](https://docs.faucet.nz/en/latest/intro.html) a bit like Kubernetes for networking. Sign me up.
 
 ### VMWare Fusion
 
