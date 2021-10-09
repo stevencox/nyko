@@ -1,0 +1,37 @@
+#!/bin/bash
+
+################################################################
+##
+## Nyko compiles a domain specific language to target 
+## the Faucet software defined networking stack.
+##
+##   This is the Bash command line interface (CLI) for Nyko.
+##   
+##   author: steven cox
+##   version: 0.1
+##   usage:
+##      
+##     compile: 
+##      
+##       nyko compile <program.nyko>
+##       ex: nyko compile faucet.nyko
+##       
+################################################################
+set -e
+
+##
+## Get our location and configure the path.
+##
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+NYKO_ROOT=$( dirname $DIR )
+export PYTHONPATH=$NYKO_ROOT/src
+export NYKO=$NYKO_ROOT
+
+##
+## Run Nyko
+##
+compile () {
+    python $NYKO/src/nyko/compiler.py --source $*
+}
+
+$*

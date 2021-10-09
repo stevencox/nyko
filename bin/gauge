@@ -1,0 +1,10 @@
+mkdir -p var/log/faucet/gauge/
+docker pull faucet/gauge:latest
+docker run -d \
+    --name gauge \
+    --restart=always \
+    -v $PWD/etc/faucet/:/etc/faucet/ \
+    -v $PWD/var/log/faucet/:/var/log/faucet/ \
+    -p 6654:6653 \
+    -p 9303:9303 \
+    faucet/gauge
