@@ -2,7 +2,7 @@ I went on a journey to get a sense of what's going on with software defined netw
 
 ## GNS3
 
-Simulates. networks using Dynamips. Has desktop and web based UIs that connect to a server which can plugin networking hardware ISOs.
+Simulates networks using Dynamips. Has desktop and web based UIs that connect to a server which can plugin networking hardware ISOs.
 
 ### GNS3 Server in VMWare Fusion on OSX
 ![image](https://user-images.githubusercontent.com/306971/136234919-9cee597a-06d7-41d4-9e69-9143fe54431f.png)
