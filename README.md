@@ -6,8 +6,8 @@ Nyko is a design playground for a compiler to abstract and automate development 
 
 ## Design
 * **Parser**: Nyko uses pyparsing, a [PEG](https://en.wikipedia.org/wiki/Parsing_expression_grammar) parser used in the [TranQL](https://pubmed.ncbi.nlm.nih.gov/33226347/) [grammar](https://github.com/helxplatform/tranql/blob/master/src/tranql/grammar.py). 
-  * It is quick enough to support interactive code completion via an API and has been easy and reliable to work with. 
-  * To do, compare to newcomer [Lark](https://github.com/lark-parser/lark) and classic [ANTLR](https://www.antlr.org/download.html) around relative expressivity, ease of use, and performance.
+  * It's quick enough to support interactive code completion and has been easy and reliable to work with. 
+  * To do, compare expressivity, ease of use, and performance to newcomer [Lark](https://github.com/lark-parser/lark) and classic [ANTLR](https://www.antlr.org/download.html).
 * **Abstract Syntax Tree (AST)**: The design of the abstract syntax tree will be impacted by the parser, and is also coupled to the structure of the model of the configuration. So the effort to create the AST will likely be a gating factor. This argues
   * for experimenting with different parsers with a tiny grammar and AST to make choices about tradeoffs and
   * that automated reverse engineering of the structure of the config to generate parts of the lexical analysis phase.
