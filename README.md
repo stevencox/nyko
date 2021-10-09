@@ -38,7 +38,7 @@ With log level set to `DEBUG`, we get:
 ![image](https://user-images.githubusercontent.com/306971/136625447-c5f4ce0a-5f4c-459e-987f-36d57a403906.png)
 So Nyko has rewritten the config, triggering reload. To get to this point, I (1) copied the default configs from the Faucet GitHub repo (2) put them in a standard directory (3) mounted directories in that hierarchy to several containers via the docker-compose and (4) wrote the output of Nyko to that hierarchy. All of this should be coordinated by the tooling as it's time consuming and error prone to do manually.
 
-### Faucet Auto Reloads Config
+### Faucet Auto Reloads Nyko Updates
 And Faucet reloads, setting VLAN office's vid to 1006.
 ![image](https://user-images.githubusercontent.com/306971/136625607-983c989e-dbb2-4f03-aa3d-2acdd1dfddbd.png)
 
